@@ -1,0 +1,7 @@
+{%block content%}
+    <form method="POST" enctype="multipart/form-data">
+         {% csrf_token %}
+         {{ form.as_p }}
+         <a href = "{% url "emplist" %}"><input type = "submit" value="Save"></input></a>
+    </from>
+{%endblock%}

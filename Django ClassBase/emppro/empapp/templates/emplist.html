@@ -1,0 +1,11 @@
+{% block content  %}
+    {% for emp in emps %}
+        <ul>
+            <li>{{emp.name}}</li>
+            <li><a href = "{% url "empupdate" emp.pk %}">Update</a></li>
+            <li><a href = "{% url "empdelete" pk=emp.pk%}">Delete</a></li>
+        </ul>
+    {% endfor %}
+    <li><a href = "{% url "empcreate" %}">Add</a></li>
+{% endblock  %}
+
